@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body { margin: 0; padding: 24px 28px; background: var(--bg-page); font-family: var(--font-body); }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font: 500 14px/1 var(--font-body);
+    padding: 10px 16px; border-radius: var(--radius-md);
+    border: 1px solid transparent; cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  }
+  .btn.primary { background: var(--brand-primary); color: #fff; }
+  .btn.primary:hover { background: var(--brand-primary-hover); }
+  .btn.secondary { background: #fff; color: var(--fg-strong); border-color: var(--border-default); }
+  .btn.secondary:hover { background: var(--slate-50); }
+  .btn.ghost { background: transparent; color: var(--brand-primary); }
+  .btn.ghost:hover { background: var(--brand-primary-wash); }
+  .btn.sm { padding: 7px 12px; font-size: 13px; border-radius: var(--radius-sm); }
+  .btn.lg { padding: 13px 20px; font-size: 15px; }
+  .label { font-family: var(--font-mono); font-size: 11px; color: var(--fg-subtle); width: 70px; }
+  svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="label">variants</span>
+    <button class="btn primary">Запросить демо <svg><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    <button class="btn secondary">Документация</button>
+    <button class="btn ghost">Подробнее</button>
+  </div>
+  <div class="row">
+    <span class="label">sizes</span>
+    <button class="btn primary sm">Small</button>
+    <button class="btn primary">Default</button>
+    <button class="btn primary lg">Large</button>
+  </div>
+</body>
+</html>
